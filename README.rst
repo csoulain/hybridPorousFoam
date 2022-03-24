@@ -2,12 +2,12 @@
 Simulation of Multiphase Flow in Hybrid-Scale Porous Media
 ================================================================================
 
-This solver simulates single- and two-phase flow in porous media that contains two characteristic length scales: a large scale solid-free domain where flow is solved through the Volume-Of-Fluid Method, and a small scale porous domain where flow is solved through two-phase Darcy's Law. Both domains are coupled and are solved simultaneously with a single momentum equation and within a single mesh.  
+This solver simulates single- and two-phase flow in porous media that contains two characteristic length scales: a large scale solid-free domain where flow is solved through the Volume-Of-Fluid Method, and a small scale porous domain where flow is solved through two-phase Darcy's Law. Both domains are coupled and are solved simultaneously with a single momentum equation and within a single mesh.
 
-The most recent version also includes a simplified solver that can be used exclusively to model single-phase flow in hybrid scale porous media. 
+The most recent version also includes a simplified solver that can be used exclusively to model single-phase flow in hybrid scale porous media.
 
 This repository was created by Francisco J. Carrillo and Cyprien Soulaine with the
-support of Ian C. Bourg. 
+support of Ian C. Bourg.
 
 **Conceptual Representation of the Modeling Framework:**
 
@@ -15,7 +15,7 @@ support of Ian C. Bourg.
     :align: right
     :alt: alternate text
     :figclass: align-right
-    
+
 
 ----------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ support of Ian C. Bourg.
 General Information
 ################################################################################
 
-- This toolbox is compatible with OpenFOAM 7.0 and later.
+- This toolbox is compatible with OpenFOAM 8.0.
 
 - This toolbox needs only a standard OpenFOAM installation (see www.openfoam.org)
 
@@ -39,9 +39,9 @@ First, make sure to source the OpenFOAM file, as shown in the following example 
 
 .. code-block:: bash
 
-  source /opt/openfoam7x/etc/bashrc
+  source /opt/openfoam8/etc/bashrc
 
-Then, in the "hybridPorousInterFoam" directory, run: 
+Then, in the "hybridPorousFoam" directory, run: 
 
 .. code-block:: bash
 
@@ -57,7 +57,7 @@ To remove temporary files, dynamic libraries, and executables, run:
 
 .. code-block:: bash
 
-  ./Allwclean 
+  ./Allwclean
 
 ################################################################################
 Running the Tutorials
@@ -69,7 +69,7 @@ To test if the solver was installed correctly, you can run all the included tuto
 
   python runTutorials.py
 
-Note that this will only run each case for a single time step. Still, it might take a while. Also make sure to use python2 to run the associated script.  
+Note that this will only run each case for a single time step. Still, it might take a while. Also make sure to use python2 to run the associated script.
 
 ----------------------------------------------------------------------------
 
@@ -100,7 +100,7 @@ List of Included Cases
 
 - A basic template that includes all the neccesary files to run a succesfull simulation. Each variable and parameter within the "0/" directory and the "constant/transportProperties" file is labeled and explained.
 
----------------------------------------------------------------------------- 
+----------------------------------------------------------------------------
 
 **Darcy Flow Cases**
 
@@ -143,8 +143,8 @@ List of Included Cases
 **Viscous Fingering in Oil Reservoirs:**
 
 ##.. figure:: /figures/viscousFingering.png
-   
-    
+
+
 ################################################################################
 List of Included Libraries
 ################################################################################
@@ -156,18 +156,18 @@ List of Included Libraries
 ----------------------------------------------------------------------------
 
 **porousImmicscibleIncompressibleTwoPhaseMixture**
-              
+
 - Implementation of an immicisble incompressible two-phase fluid class that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
 **porousTwoPhaseProperties:**
-     
+
 - Defenition of two-phase fluid properties that allows for the use of porousInterfaceProperties
 
 ----------------------------------------------------------------------------
 
-**porousModels/phaseModels** ( *adapted* ) 
+**porousModels/phaseModels** ( *adapted* )
 
 - Incompressible phase model for porous media flows (constant density and viscosity)
 
@@ -180,14 +180,14 @@ List of Included Libraries
 ----------------------------------------------------------------------------
 
 **porousModels/relativePermeabilityModels** ( *adapted*  )
-     
+
 - Relative permeability models (Brooks and Corey, Van Genuchten)
 
 ----------------------------------------------------------------------------
 
 **Note on Adapted Libraries**
 
-- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code can be used to efficiently model full Darcy-scale flows. 
+- The libraries marked as "adapted" were obtained from the open-sourced *porousMultiphaseFoam* source code published in Horgue P. et al. (2015). Said code can be used to efficiently model full Darcy-scale flows.
 
 ################################################################################
 Citing the Toolbox
@@ -198,7 +198,7 @@ If you use this solver, please cite the following paper (theory) and the code (i
 **Paper:**
 Carrillo F.J., Bourg, I. C., Soulaine, C., Multiphase flow modeling in multiscale porous media: An open-source micro-continuum approach, J. Comput. Phys. (2020), https://doi.org/10.1016/j.jcpx.2020.100073
 
-**Code:** 
+**Code:**
 https://doi.org/10.5281/zenodo.3724707 (DOI: 10.5281/zenodo.3724707)
 
 
@@ -209,7 +209,7 @@ Authors' Publications
 
 2. Soulaine, C., Gjetvaj, F., Garing, C., Roman, S., Russian, A., Gouze, P., Tchelepi, H., May 2016. The impact of sub-resolution porosity of918 x-ray microtomography images on the permeability. Transport in Porous Media 113 (1), 227–243.919
 
-3. Soulaine, C., Roman, S., Kovscek, A., Tchelepi, H. A., 2017. Mineral dissolution and wormholing from a pore-scale perspective. Journal of920 Fluid Mechanics 827, 457–483.921 URL https://www.cambridge.org/core/product/identifier/S0022112017004992/type/journal_article922 
+3. Soulaine, C., Roman, S., Kovscek, A., Tchelepi, H. A., 2017. Mineral dissolution and wormholing from a pore-scale perspective. Journal of920 Fluid Mechanics 827, 457–483.921 URL https://www.cambridge.org/core/product/identifier/S0022112017004992/type/journal_article922
 
 4. Soulaine, C., Roman, S., Kovscek, A., Tchelepi, H. A., 2018. Pore-scale modelling of multiphase reactive ﬂow. Application to mineral923 dissolution with production of CO2. Journal of Fluid Mechanics 855, 616–645.924 Soulaine, C., Tchelepi, H.A., 2016.Micro-continuumapproachforpore-scalesimulationofsubsurface processes.TransportIn PorousMedia925 113, 431–456
 
